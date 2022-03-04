@@ -10,3 +10,5 @@ class Robot:
 
     def attack(self,dinosaur):
         dinosaur.health -= int(self.weapon.attack_power)
+
+

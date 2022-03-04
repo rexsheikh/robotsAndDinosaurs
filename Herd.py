@@ -2,13 +2,11 @@ from Dinosaur import Dinosaur
 
 class Herd:
 
-    def __init__(self):
-        self.dinosaurs = []
+    def __init__(self,dinosaurs):
+        self.dinosaurs = dinosaurs
 
-    def create_herd(self,dinosaur):
-        self.dinosaurs.append(dinosaur)
-        
-    def display_herd(self,dinosaurs):
-        for i in range(0,len(dinosaurs)):
-            print(f" name/health: {dinosaurs[i].name}/{dinosaurs[i].health}")
+    def display_herd(self):
+        print('Here are the dinosaurs\n                   name/health/weapon')
+        for i in range(0,len(self.dinosaurs)):
+            print(f"Press {i} to select: {self.dinosaurs[i].name}/{self.dinosaurs[i].health}/{self.dinosaurs[i].attack_power}")
             
