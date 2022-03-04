@@ -1,4 +1,3 @@
-from os import kill
 from Dinosaur import Dinosaur
 from Fleet import Fleet
 from Herd import Herd
@@ -60,6 +59,9 @@ herd.display_herd(herd.dinosaurs)
 
 killtron.attack(t_rex)
 herd.display_herd(herd.dinosaurs)
+# obot.health -= self.attack_power
+t_rex.attack(killtron)
+fleet.display_fleet(fleet.robots)
 
 
 
