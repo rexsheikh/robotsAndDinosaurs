@@ -2,8 +2,12 @@ from Robot import Robot
 from Weapon import Weapon
 
 class Fleet:
-    def __init__(self,robots):
-        self.robots = robots
+    def __init__(self):
+        self.robots = []
+
+    def create_fleet(self,robot):
+        self.robots.append(robot)
+
 
 
     def display_fleet(self):

@@ -2,8 +2,11 @@ from Dinosaur import Dinosaur
 
 class Herd:
 
-    def __init__(self,dinosaurs):
-        self.dinosaurs = dinosaurs
+    def __init__(self):
+        self.dinosaurs = []
+    
+    def create_herd(self,dinosaur):
+        self.dinosaurs.append(dinosaur)
 
     def display_herd(self):
         print('Here are the dinosaurs\n                   name/health/weapon')
