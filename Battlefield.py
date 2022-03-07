@@ -1,4 +1,3 @@
-from readline import read_init_file
 from Dinosaur import Dinosaur
 from Fleet import Fleet
 from Herd import Herd
@@ -9,6 +8,7 @@ from Weapon import Weapon
 class Battlefield:
 
     def __init__(self):
+
         self.rifle = Weapon('rifle',20)
         self.laser_beam = Weapon('laser beam',50)
         self.sword = Weapon('sword',100)
@@ -29,9 +29,9 @@ class Battlefield:
         "tackle" : 50
         }
 
-        self.t_rex = Dinosaur('t-rex',100,100)
-        self.v_raptor = Dinosaur('velociraptor',100,100)
-        self.bronto = Dinosaur('brontosaurus',100,100)
+        self.t_rex = Dinosaur('t-rex',100,100,100)
+        self.v_raptor = Dinosaur('velociraptor',100,100,100)
+        self.bronto = Dinosaur('brontosaurus',100,100,100)
         self.herd = Herd()
         self.herd.create_herd(self.t_rex)
         self.herd.create_herd(self.v_raptor)
@@ -95,15 +95,8 @@ class Battlefield:
                 Press 1 for {self.weapons[1].name}\n\
                 Press 2 for {self.weapons[2].name}\n\
                 Press 3 for {self.weapons[3].name} --> "))
-            self.robot_name_list[i] = Robot(self.robot_name_list[i],100,self.weapons[self.equip_input])
+            self.robot_name_list[i] = Robot(self.robot_name_list[i],100,self.weapons[self.equip_input],100)
             self.fleet.create_fleet(self.robot_name_list[i])
-
-            
-
-        #iterate through the list of robots. print the robot's name. have the user select the weapon 
-        #from the weapon inventory
-        #will then need to create the fleet from the robots
-        pass
     def robot_attack_option(self):
         pass
 
