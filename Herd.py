@@ -9,7 +9,7 @@ class Herd:
         self.dinosaurs.append(dinosaur)
 
     def display_herd(self):
-        print('Here are the dinosaurs\n                   name/health/weapon')
+        print('Here are the dinosaurs\n                   name/health')
         for i in range(0,len(self.dinosaurs)):
-            print(f"Press {i} to select: {self.dinosaurs[i].name}/{self.dinosaurs[i].health}/{self.dinosaurs[i].attack_power}")
+            print(f"Press {i} to select: {self.dinosaurs[i].name}/{self.dinosaurs[i].health}")
             
